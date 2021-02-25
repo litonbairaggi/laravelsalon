@@ -36,7 +36,12 @@ Route::get('/backend/team/edit','Backend\TeamController@edit');
 Route::get('/backend/team/detete/{id}','Backend\TeamController@delete');
 
 // blog rout
-Route::get('/backend/team/create','Backend\TeamController@create');
+Route::get('/backend/blog/create','Backend\TeamController@create');
+
+
+// services rout
+Route::get('/backend/services/create','Backend\TeamController@create');
+Route::get('/backend/services/list','Backend\TeamController@list');
 
 
 
