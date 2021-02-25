@@ -8,8 +8,12 @@
                             Team Create
                             </div>
                             <div class="card-body">
-                          
-                            <form action="/action_page.php">
+
+                            @if(Session::has('message'))
+<p class="alert alert-success">{{ Session::get('message') }}</p>
+@endif   
+                            <form action="{{URL::to('/backend/team/store')}}" method="post">
+                            @csrf
                                 <div class="form-group">
                                     <label for="name">Name:</label>
                                     <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
@@ -26,7 +30,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="email">Linkedin:</label>
+                                    <label for="linkedin">Linkedin:</label>
                                     <input type="text" class="form-control" placeholder="Enter linkedin" name="linkedin" id="linkedin">
                                 </div>
                                 
@@ -37,7 +41,7 @@
 
                                 <div class="form-group">
                                     <label for="instagram">Instagram:</label>
-                                    <input type="text" class="form-control" placeholder="Enter twitter" name="instagram" id="instagram">
+                                    <input type="text" class="form-control" placeholder="Enter instagram" name="instagram" id="instagram">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-primary">Submit</button>

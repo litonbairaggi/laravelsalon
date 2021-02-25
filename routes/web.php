@@ -30,6 +30,9 @@ Route::get('/contact','PageController@contact');
 
 // team rout
 Route::get('/backend/team/create','Backend\TeamController@create');
+Route::post('/backend/team/store','Backend\TeamController@store');
 Route::get('/backend/team/list','Backend\TeamController@list');
+Route::get('/backend/team/edit','Backend\TeamController@edit');
+Route::get('/backend/team/detete/{id}','Backend\TeamController@delete');
 
 
