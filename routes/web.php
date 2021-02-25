@@ -36,13 +36,14 @@ Route::get('/backend/team/edit','Backend\TeamController@edit');
 Route::get('/backend/team/detete/{id}','Backend\TeamController@delete');
 
 // blog rout
-Route::get('/backend/blog/create','Backend\TeamController@create');
+Route::get('/backend/blog/create','Backend\BlogController@create');
 
 
 // services rout
-Route::get('/backend/services/create','Backend\TeamController@create');
-Route::get('/backend/services/list','Backend\TeamController@list');
-Route::post('/backend/services/store','Backend\TeamController@store');
+Route::get('/backend/servicess/create','Backend\ServicesController@create');
+Route::post('/backend/servicess/store','Backend\ServicesController@store');
+Route::get('/backend/servicess/list','Backend\ServicesController@list');
+
 
 
 

@@ -12,16 +12,16 @@
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/services/store')}}" method="post">
+                            <form action="{{URL::to('/backend/servicess/store')}}" method="post">
                             @csrf
                                 <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
+                                    <label for="name">Description name:</label>
+                                    <input type="text" class="form-control" placeholder="Description name" name="name" id="name">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="name">Description:</label>                                      
-                                    <textarea rows = "5" cols = "60" name = "description" placeholder="Description text hare...">
+                                    <label for="description">Description:</label><br>
+                                        <textarea rows="4" cols="50" class="form-control" name="description" id="description" placeholder="Description text hare..."></textarea>
                                 </div>    
                                 
                                 <button type="submit" class="btn btn-primary">Submit</button>
