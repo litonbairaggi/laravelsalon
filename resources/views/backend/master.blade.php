@@ -39,20 +39,12 @@
         </nav>
 
 
-
-
-
-
-
-
-
-
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="team" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Team
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -61,6 +53,18 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{URL::to('backend/team/create')}}">Team Create</a>
                                     <a class="nav-link" href="{{URL::to('backend/team/list')}}">Team List</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="services" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Services
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{URL::to('backend/services/create')}}">Services Create</a>
+                                    <a class="nav-link" href="{{URL::to('backend/services/list')}}">Services List</a>
                                 </nav>
                             </div>
 
@@ -86,12 +90,12 @@
         </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+        <script src="{{ asset('assets/backend/js/scripts.js')}}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="{{ asset('assets/backend/assets/demo/chart-area-demo.js')}}"></script>
+        <script src="{{ asset('assets/backend/assets/demo/chart-bar-demo.js')}}"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js"></script>
+        <script src="{{ asset('assets/backend/assets/demo/datatables-demo.js')}}"></script>
     </body>
 </html>
