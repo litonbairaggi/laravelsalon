@@ -1,8 +1,7 @@
 @extends('backend.master')
 @section('content')
 
-<div class="container-fluid">
-                       
+<div class="container-fluid">                      
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>

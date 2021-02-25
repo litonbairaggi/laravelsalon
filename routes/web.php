@@ -42,6 +42,7 @@ Route::get('/backend/blog/create','Backend\TeamController@create');
 // services rout
 Route::get('/backend/services/create','Backend\TeamController@create');
 Route::get('/backend/services/list','Backend\TeamController@list');
+Route::post('/backend/services/store','Backend\TeamController@store');
 
 
 

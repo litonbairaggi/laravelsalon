@@ -11,6 +11,9 @@ class ServicesController extends Controller
     public function create(){
         return view('backend.services.create');
     }
+    public function store(){
+        return view('backend.services.store');
+    }
     public function list(){
         return view('backend.services.create');
     }
