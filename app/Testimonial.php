@@ -12,5 +12,6 @@ class Testimonial extends Model
     protected $fillable = [
         'name', 
         'description',
+        'testimonial_img',
     ];
 }

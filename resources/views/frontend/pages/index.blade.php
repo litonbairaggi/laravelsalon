@@ -158,7 +158,7 @@
           </div>
           <div class="team_content">
             <h5><a href="#">{{$team->name}}</a></h5>
-            <p class="category">{{$team->name}}</p>
+            <p class="category">{{$team->desigation}}</p>
             <!-- category --> 
           </div>
         </div>
@@ -191,20 +191,15 @@
       <h1>Our Blog</h1>
     </div>
     <div class="row">
+    @foreach($blogs as $blog)
       <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog01.png')}}"></div>
+        <div class="blogImg"><img alt="" src="{{URL::to('uploads', $blog->blog_img)}}"></div>
         <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
+          <h3><a href="blog_details.html">{{$blog->name}}</a></h3>
+          <div class="blog_date">Feb 26, 2020</div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog02.png')}}"></div>
-        <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
-        </div>
-      </div>
+    @endforeach 
     </div>
   </div>
 </div>
@@ -218,46 +213,18 @@
       <h1> What Our Clients Say </h1>
     </div>
     <ul class="owl-carousel testimonials_list unorderList">
+    @foreach($testimonials as $testimonial)
       <li class="item">
         <div class="testimonials_sec">
           <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
           <div class="client_box">
-            <div class="clientImg"><img alt="" src="{{ asset('assets/images/client1.jpg')}}"></div>
-            <h3>Wanda Bates</h3>
+            <div class="clientImg"><img alt="" src="{{URL::to('uploads',$testimonial->testimonial_img)}}"></div>
+            <h3>{{$testimonial->name}}</h3>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, urna eu scelerisque maximus, urna nibh semper lectus, ut interdum nunc ligula et magna. In ac mauris vehicula, vulputate sem at, placerat nisl. Etiam laoreet erat magna, at hendrerit lorem vulputate non. Nam facilisis congue convallis.</p>
+          <p>{{$testimonial->description}}</p>
         </div>
       </li>
-      <li class="item">
-        <div class="testimonials_sec">
-          <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
-          <div class="client_box">
-            <div class="clientImg"><img alt="" src="{{ asset('assets/images/client2.jpg')}}"></div>
-            <h3>Wanda Bates</h3>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, urna eu scelerisque maximus, urna nibh semper lectus, ut interdum nunc ligula et magna. In ac mauris vehicula, vulputate sem at, placerat nisl. Etiam laoreet erat magna, at hendrerit lorem vulputate non. Nam facilisis congue convallis.</p>
-        </div>
-      </li>
-      <li class="item">
-        <div class="testimonials_sec">
-          <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
-          <div class="client_box">
-            <div class="clientImg"><img alt="" src="{{ asset('assets/images/client1.jpg')}}"></div>
-            <h3>Wanda Bates</h3>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, urna eu scelerisque maximus, urna nibh semper lectus, ut interdum nunc ligula et magna. In ac mauris vehicula, vulputate sem at, placerat nisl. Etiam laoreet erat magna, at hendrerit lorem vulputate non. Nam facilisis congue convallis.</p>
-        </div>
-      </li>
-      <li class="item">
-        <div class="testimonials_sec">
-          <div class="quote_icon"><i class="fas fa-quote-left"></i></div>
-          <div class="client_box">
-            <div class="clientImg"><img alt="" src="{{ asset('assets/images/client2.jpg')}}"></div>
-            <h3>Wanda Bates</h3>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, urna eu scelerisque maximus, urna nibh semper lectus, ut interdum nunc ligula et magna. In ac mauris vehicula, vulputate sem at, placerat nisl. Etiam laoreet erat magna, at hendrerit lorem vulputate non. Nam facilisis congue convallis.</p>
-        </div>
-      </li>
+    @endforeach
     </ul>
   </div>
 </div>

@@ -17,9 +17,13 @@ class BlogController extends Controller
 
     public function store(Request $request){
 
+        $blogImageName = time().'.'.$request->blog_img->extension();  
+        $request->blog_img->move('uploads', $blogImageName);
+
         $blogobj= new Blog;       
         $blogobj->name=$request->name;
         $blogobj->description=$request->description;
+        $blogobj->blog_img=$blogImageName;
         $blogobj->save();    
         Session::flash('message','Successfully Create');
         return redirect()->back();

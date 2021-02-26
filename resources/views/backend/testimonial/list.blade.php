@@ -12,6 +12,8 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
@@ -19,6 +21,8 @@
                                         </thead>
                                         <tfoot>
                                             <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
@@ -28,6 +32,8 @@
                                         @if(!empty($testimonials))
                                            @foreach($testimonials as $testimonial)
                                         <tr>
+                                            <td>{{$testimonial->id}}</td>
+                                            <td><img src="{{URL::to('uploads',$testimonial->testimonial_img)}}" height="100px"></td>
                                             <td>{{$testimonial->name}}</td>
                                             <td>{{$testimonial->description}}</td>
                                             <td>

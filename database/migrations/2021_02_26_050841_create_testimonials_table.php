@@ -17,6 +17,7 @@ class CreateTestimonialsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
+            $table->string('testimonial_img');
             $table->timestamps();
         });
     }

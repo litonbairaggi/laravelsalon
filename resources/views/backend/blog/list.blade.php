@@ -12,13 +12,16 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
-                                                <th>Name</th>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
@@ -28,6 +31,8 @@
                                         @if(!empty($blogs))
                                            @foreach($blogs as $blog)
                                         <tr>
+                                            <td>{{$blog->id}}</td>
+                                            <td><img src="{{URL::to('uploads',$blog->blog_img)}}" height="100px"></td>
                                             <td>{{$blog->name}}</td>
                                             <td>{{$blog->description}}</td>
                                             <td>

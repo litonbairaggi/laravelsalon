@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Team;
 use App\Services;
+use App\Blog;
+use App\Testimonial;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -12,7 +14,9 @@ class PageController extends Controller
     public function home(){
         $teams=Team::get();
         $servicess=Services::orderBy('id','desc')->limit(3)->get();
-        return view('frontend.pages.index', compact('teams','servicess'));
+        $blogs=Blog::orderBy('id', 'asc')->limit(2)->get();
+        $testimonials=Testimonial::get();
+        return view('frontend.pages.index', compact('teams','servicess','blogs','testimonials'));
     }
     public function about(){
         return view('frontend.pages.about');

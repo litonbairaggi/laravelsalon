@@ -17,9 +17,13 @@ class TestimonialController extends Controller
     }
     public function store(Request $request){
 
+        $testimonialImageName = time().'.'.$request->testimonial_img->extension();
+        $request->testimonial_img->move('uploads', $testimonialImageName);
+
         $testimonialobj= new Testimonial;       
         $testimonialobj->name=$request->name;
         $testimonialobj->description=$request->description;
+        $testimonialobj->testimonial_img = $testimonialImageName;
         $testimonialobj->save();    
         Session::flash('message','Successfully Create');
         return redirect()->back();

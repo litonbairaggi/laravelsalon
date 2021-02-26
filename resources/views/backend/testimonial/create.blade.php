@@ -12,7 +12,7 @@
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/testimonial/store')}}" method="post">
+                            <form action="{{URL::to('/backend/testimonial/store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                                 <div class="form-group">
                                     <label for="name">Testimonial name:</label>
@@ -22,7 +22,12 @@
                                 <div class="form-group">
                                     <label for="description">Description:</label><br>
                                         <textarea rows="4" cols="50" class="form-control" name="description" id="description" placeholder="Description text hare..."></textarea>
-                                </div>    
+                                </div> 
+
+                                <div class="form-group">
+                                    <label for="name">Testimonial Image:</label>
+                                    <input type="file" class="form-control" name="testimonial_img">
+                                </div>   
                                 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
