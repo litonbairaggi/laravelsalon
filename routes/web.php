@@ -28,6 +28,15 @@ Route::get('/blog_list','PageController@blog_list');
 Route::get('/testimonials','PageController@testimonials');
 Route::get('/contact','PageController@contact');
 
+
+
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+]);
+Route::group(['middleware' => 'auth'], function () {
+
 // team rout
 Route::get('/backend/team/create','Backend\TeamController@create');
 Route::post('/backend/team/store','Backend\TeamController@store');
@@ -60,6 +69,7 @@ Route::get('/backend/testimonial/edit/{id}','Backend\TestimonialController@edit'
 Route::post('/backend/testimonial/update/{id}','Backend\TestimonialController@update');
 Route::get('/backend/testimonial/delete/{id}','Backend\TestimonialController@delete');
 
+});
 
 
 
