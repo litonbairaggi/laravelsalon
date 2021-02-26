@@ -15,15 +15,15 @@
                             <form action="{{URL::to('/backend/blog/store')}}" method="post">
                             @csrf
                                 <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="text" class="form-control" placeholder="Enter name" name="name" id="name">
+                                    <label for="name">Blog name:</label>
+                                    <input type="text" class="form-control" placeholder="Blog name" name="name" id="name">
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label for="desigation">Desigation:</label>
-                                    <input type="text" class="form-control" placeholder="Enter desigation" name="desigation" id="desigation">
-                                </div>
-                                       
+                                    <label for="description">Description:</label><br>
+                                        <textarea rows="4" cols="50" class="form-control" name="description" id="description" placeholder="Description text hare..."></textarea>
+                                </div>    
+                                
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
 

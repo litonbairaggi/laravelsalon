@@ -35,7 +35,7 @@ class TeamController extends Controller
         return view('backend.team.list',compact('teams'));
     }
     public function edit(){
-        return view('backend.team.list');
+        return view('backend.team.edit');
     }
     public function delete($id){
         $teamProfile=Team::findOrFail($id);

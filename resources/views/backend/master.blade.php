@@ -87,8 +87,8 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{URL::to('/backend/blog/create')}}">Testimonial Create</a>
-                                    <a class="nav-link" href="{{URL::to('/backend/blog/list')}}">Testimonial List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/testimonial/create')}}">Testimonial Create</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/testimonial/list')}}">Testimonial List</a>
                                 </nav>
                             </div>
 

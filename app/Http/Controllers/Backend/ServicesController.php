@@ -26,6 +26,15 @@ class ServicesController extends Controller
     }
 
     public function list(){
-        return view('backend.servicess.create');
+        $servicess =Services::all();
+
+        return view('backend.servicess.list', compact('servicess'));
+    }
+    public function delete($id){
+        $servicesProfile=Services::findOrFail($id);
+        $servicesProfile->delete();
+        return redirect()->back();
+        //return view('backend.servicess.delete');
+
     }
 }
