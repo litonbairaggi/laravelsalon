@@ -31,7 +31,7 @@
                                             <td>{{$services->name}}</td>
                                             <td>{{$services->description}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <a href="{{URL::to('/backend/servicess/edit',$services->id)}}" class="btn btn-primary">Edit</a>
                                                 <a href="{{URL::to('/backend/servicess/delete',$services->id)}}"  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                                             </td>
                                             </tr>

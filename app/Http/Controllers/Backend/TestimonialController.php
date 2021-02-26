@@ -25,8 +25,9 @@ class TestimonialController extends Controller
         return redirect()->back();
         
     }
-    public function edit(){
-        return view('backend.testimonial.edit');
+    public function edit($id){
+        $testimonial=Testimonial::findOrFail($id);
+        return view('backend.testimonial.edit', compact('testimonial'));
     }
 
     public function list(){
@@ -39,6 +40,14 @@ class TestimonialController extends Controller
         $testimonialProfile->delete();
         return redirect()->back();
         //return view('backend.testimonial.delete');
+    }
+    public function update(Request $request, $id){
+        $testiProfile=Testimonial::findOrFail($id);
+        $testiProfile->name=$request->name;
+        $testiProfile->description=$request->description;
+        $testiProfile->save();
 
+        Session::flash('message', 'Successfully Update'); 
+        return redirect()->back();
     }
 }

@@ -31,7 +31,7 @@
                                             <td>{{$testimonial->name}}</td>
                                             <td>{{$testimonial->description}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <a href="{{URL::to('/backend/testimonial/edit',$testimonial->id)}}" class="btn btn-primary">Edit</a>
                                                 <a href="{{URL::to('/backend/testimonial/delete',$testimonial->id)}}"  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                                             </td>
                                             </tr>

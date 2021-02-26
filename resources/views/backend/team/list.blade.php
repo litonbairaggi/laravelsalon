@@ -34,7 +34,7 @@
                                             <td>{{$team->desigation}}</td>
                                             <td>{{$team->facebook}}</td>
                                             <td>
-                                                <a href="#" class="btn btn-primary">Edit</a>
+                                                <a href="{{URL::to('/backend/team/edit',$team->id)}}" class="btn btn-primary">Edit</a>
                                                 <a href="{{URL::to('/backend/team/delete',$team->id)}}"  class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                                             </td>
                                             </tr>

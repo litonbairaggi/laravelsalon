@@ -24,20 +24,27 @@ class ServicesController extends Controller
         return redirect()->back();
         
     }
-    public function edit(){
-        return view('backend.servicess.edit');
-    }
-
     public function list(){
         $servicess =Services::all();
-
         return view('backend.servicess.list', compact('servicess'));
+    }
+    public function edit($id){
+        $services=Services::findOrFail($id);
+        return view('backend.servicess.edit', compact('services'));
     }
     public function delete($id){
         $servicesProfile=Services::findOrFail($id);
         $servicesProfile->delete();
         return redirect()->back();
         //return view('backend.servicess.delete');
+    }
+    public function update(Request $request, $id){
+        $serviceProfile=Services::findOrFail($id);
+        $serviceProfile->name=$request->name;
+        $serviceProfile->description=$request->description;
+        $serviceProfile->save();
 
+        Session::flash('message', 'Successfully Update'); 
+        return redirect()->back();
     }
 }
