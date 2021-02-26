@@ -32,14 +32,15 @@ Route::get('/contact','PageController@contact');
 Route::get('/backend/team/create','Backend\TeamController@create');
 Route::post('/backend/team/store','Backend\TeamController@store');
 Route::get('/backend/team/list','Backend\TeamController@list');
-Route::get('/backend/team/edit','Backend\TeamController@edit');
+Route::get('/backend/team/edit/{id}','Backend\TeamController@edit');
 Route::get('/backend/team/delete/{id}','Backend\TeamController@delete');
 
 // blog rout
 Route::get('/backend/blog/create','Backend\BlogController@create');
 Route::post('/backend/blog/store','Backend\BlogController@store');
 Route::get('/backend/blog/list','Backend\BlogController@list');
-Route::get('/backend/blog/edit','Backend\BlogController@edit');
+Route::get('/backend/blog/edit/{id}','Backend\BlogController@edit');
+Route::post('/backend/blog/update/{id}','Backend\BlogController@edit');
 Route::get('/backend/blog/delete/{id}','Backend\BlogController@delete');
 
 
@@ -47,12 +48,14 @@ Route::get('/backend/blog/delete/{id}','Backend\BlogController@delete');
 Route::get('/backend/servicess/create','Backend\ServicesController@create');
 Route::post('/backend/servicess/store','Backend\ServicesController@store');
 Route::get('/backend/servicess/list','Backend\ServicesController@list');
+Route::get('/backend/servicess/edit/{id}','Backend\ServicesController@edit');
 Route::get('/backend/servicess/delete/{id}','Backend\ServicesController@delete');
 
 // testimonial rout
 Route::get('/backend/testimonial/create','Backend\TestimonialController@create');
 Route::post('/backend/testimonial/store','Backend\TestimonialController@store');
 Route::get('/backend/testimonial/list','Backend\TestimonialController@list');
+Route::get('/backend/testimonial/edit/{id}','Backend\TestimonialController@edit');
 Route::get('/backend/testimonial/delete/{id}','Backend\TestimonialController@delete');
 
 

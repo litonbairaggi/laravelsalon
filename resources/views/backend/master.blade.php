@@ -53,6 +53,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{URL::to('backend/team/create')}}">Team Create</a>
                                     <a class="nav-link" href="{{URL::to('backend/team/list')}}">Team List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/team/edit')}}">Team Edit</a>
                                 </nav>
                             </div>
 
@@ -65,6 +66,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{URL::to('/backend/servicess/create')}}">Services Create</a>
                                     <a class="nav-link" href="{{URL::to('/backend/servicess/list')}}">Services List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/servicess/edit')}}">Services Edit</a>
                                 </nav>
                             </div>
 
@@ -77,6 +79,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{URL::to('/backend/blog/create')}}">Blog Create</a>
                                     <a class="nav-link" href="{{URL::to('/backend/blog/list')}}">Blog List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/blog/edit')}}">Blog Edit</a>
                                 </nav>
                             </div>
 
@@ -89,6 +92,7 @@
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{URL::to('/backend/testimonial/create')}}">Testimonial Create</a>
                                     <a class="nav-link" href="{{URL::to('/backend/testimonial/list')}}">Testimonial List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/testimonial/edit')}}">Testimonial Edit</a>
                                 </nav>
                             </div>
 

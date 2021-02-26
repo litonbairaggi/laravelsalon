@@ -5,18 +5,18 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                            Testimonial Create
+                            Blog Create
                             </div>
                             <div class="card-body">
 
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/testimonial/create')}}" method="post">
+                            <form action="{{URL::to('/backend/blog/update',$bProfile->id)}}" method="post">
                             @csrf
                                 <div class="form-group">
-                                    <label for="name">Testimonial name:</label>
-                                    <input type="text" class="form-control" placeholder="Testimonial name" name="name" id="name">
+                                    <label for="name">Blog name:</label>
+                                    <input type="text" class="form-control" value="{{$bProfile->name}}" placeholder="Blog name" name="name" id="name">
                                 </div>
                                 
                                 <div class="form-group">

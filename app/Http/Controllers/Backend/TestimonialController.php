@@ -25,6 +25,9 @@ class TestimonialController extends Controller
         return redirect()->back();
         
     }
+    public function edit(){
+        return view('backend.testimonial.edit');
+    }
 
     public function list(){
         $testimonials =Testimonial::all();

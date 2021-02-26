@@ -30,11 +30,26 @@ class BlogController extends Controller
 
         return view('backend.blog.list', compact('blogs'));
     }
+
+    public function edit($id){
+        $blog=Blog::findOrFail($id);
+        return view('backend.blog.edit', compact('blog'));
+    }
     public function delete($id){
         $blogProfile=Blog::findOrFail($id);
         $blogProfile->delete();
         return redirect()->back();
         //return view('backend.servicess.delete');
 
+    }
+
+    public function update(Request $request, $id){
+        $bProfile=Blog::findOrFail($id);
+        $bProfile->name=$request->name;
+        $bProfile->description=$request->description;
+
+        $bProfile->save();
+        Session::flash('sucess', 'Blog successfully Update'); 
+        return redirect()->back();
     }
 }

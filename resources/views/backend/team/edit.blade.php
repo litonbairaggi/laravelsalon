@@ -12,7 +12,7 @@
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/team/edit')}}" method="post">
+                            <form action="{{URL::to('/backend/team/create')}}" method="post">
                             @csrf
                                 <div class="form-group">
                                     <label for="name">Name:</label>

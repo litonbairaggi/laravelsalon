@@ -24,6 +24,9 @@ class ServicesController extends Controller
         return redirect()->back();
         
     }
+    public function edit(){
+        return view('backend.servicess.edit');
+    }
 
     public function list(){
         $servicess =Services::all();
