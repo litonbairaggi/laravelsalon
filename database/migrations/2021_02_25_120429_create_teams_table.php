@@ -21,6 +21,7 @@ class CreateTeamsTable extends Migration
             $table->string('linkedin');
             $table->string('twitter');
             $table->string('instagram');
+            $table->string('team_img');
             $table->timestamps();
         });
     }

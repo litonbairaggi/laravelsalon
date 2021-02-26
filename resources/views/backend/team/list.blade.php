@@ -12,6 +12,8 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Designation</th>
                                                 <th>Facebook</th>
@@ -20,6 +22,8 @@
                                         </thead>
                                         <tfoot>
                                             <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
                                                 <th>Name</th>
                                                 <th>Designation</th>
                                                 <th>Facebook</th>
@@ -30,6 +34,8 @@
                                         @if(!empty($teams))
                                            @foreach($teams as $team)
                                         <tr>
+                                            <td>{{$team->id}}</td>
+                                            <td><img src="{{ URL::to('uploads',$team->team_img)}}" height="100px"></td>
                                             <td>{{$team->name}}</td>
                                             <td>{{$team->desigation}}</td>
                                             <td>{{$team->facebook}}</td>

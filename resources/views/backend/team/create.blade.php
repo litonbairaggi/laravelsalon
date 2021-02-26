@@ -12,7 +12,7 @@
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/team/store')}}" method="post">
+                            <form action="{{URL::to('/backend/team/store')}}" method="post" enctype="multipart/form-data" >
                             @csrf
                                 <div class="form-group">
                                     <label for="name">Name:</label>
@@ -42,6 +42,10 @@
                                 <div class="form-group">
                                     <label for="instagram">Instagram:</label>
                                     <input type="text" class="form-control" placeholder="Enter instagram" name="instagram" id="instagram">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instagram">Team Image:</label>
+                                    <input type="file" class="form-control"  name="team_img">
                                 </div>
                                 
                                 <button type="submit" class="btn btn-primary">Submit</button>

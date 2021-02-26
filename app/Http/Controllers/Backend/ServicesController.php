@@ -16,9 +16,15 @@ class ServicesController extends Controller
     }
     public function store(Request $request){
 
+        $servicesImageName = time().'.'.$request->services_img->extension();  
+   
+        $request->services_img->move('uploads', $servicesImageName);
+
         $servicesobj= new Services;       
         $servicesobj->name=$request->name;
         $servicesobj->description=$request->description;
+        $servicesobj->services_img=$servicesImageName;
+
         $servicesobj->save();    
         Session::flash('message','Successfully Create');
         return redirect()->back();

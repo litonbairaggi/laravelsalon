@@ -2,18 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Team;
+use App\Services;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     //
     public function home(){
-        return view('frontend.pages.index');
+        $teams=Team::get();
+        $servicess=Services::orderBy('id','desc')->limit(3)->get();
+        return view('frontend.pages.index', compact('teams','servicess'));
     }
     public function about(){
         return view('frontend.pages.about');
     }
     public function services(){
+        //  $servicess=Services::get();
         return view('frontend.pages.services');
     }
     public function services_details(){

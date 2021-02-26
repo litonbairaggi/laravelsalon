@@ -12,14 +12,18 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
+                                                <th>ID</th>
                                                 <th>Name</th>
+                                                <th>Image</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tfoot>
                                             <tr>
+                                                <th>ID</th>
                                                 <th>Name</th>
+                                                <th>Image</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
                                             </tr>
@@ -28,6 +32,8 @@
                                         @if(!empty($servicess))
                                            @foreach($servicess as $services)
                                         <tr>
+                                            <td>{{$services->id}}</td>
+                                            <td><img src="{{URL::to('uploads',$services->services_img)}}" height="100px" ></td>
                                             <td>{{$services->name}}</td>
                                             <td>{{$services->description}}</td>
                                             <td>

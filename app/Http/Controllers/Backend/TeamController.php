@@ -18,6 +18,9 @@ class TeamController extends Controller
 
     public function store(Request $request){
 
+        $teamImageName = time().'.'.$request->team_img->extension();  
+        $request->team_img->move('uploads', $teamImageName);
+
         $teamobj= new Team;       
         $teamobj->name=$request->name;       
         $teamobj->desigation=$request->desigation;       
@@ -25,6 +28,7 @@ class TeamController extends Controller
         $teamobj->linkedin=$request->linkedin;       
         $teamobj->twitter=$request->twitter;           
         $teamobj->instagram=$request->instagram;       
+        $teamobj->team_img=$teamImageName;       
         $teamobj->save();    
         Session::flash('message','Successfully Create');
         return redirect()->back();
