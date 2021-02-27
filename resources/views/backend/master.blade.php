@@ -52,6 +52,20 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
+
+                        <a class="nav-link collapsed" href="slider" data-toggle="collapse" data-target="#slider" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Slider
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="slider" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{URL::to('backend/slider/create')}}">Slider Create</a>
+                                    <a class="nav-link" href="{{URL::to('backend/slider/list')}}">Slider List</a>
+                                </nav>
+                            </div>
+
+
                             <a class="nav-link collapsed" href="team" data-toggle="collapse" data-target="#team" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Team
@@ -88,6 +102,19 @@
                                     <a class="nav-link" href="{{URL::to('/backend/blog/create')}}">Blog Create</a>
                                     <a class="nav-link" href="{{URL::to('/backend/blog/list')}}">Blog List</a>
                                     <a class="nav-link" href="{{URL::to('/backend/blog/edit')}}">Blog Edit</a>
+                                </nav>
+                            </div>
+
+                            <a class="nav-link collapsed" href="gallery" data-toggle="collapse" data-target="#gallery" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Gallery
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="gallery" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{URL::to('/backend/blog/create')}}">Gallery Create</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/blog/list')}}">Gallery List</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/blog/edit')}}">Gallery Edit</a>
                                 </nav>
                             </div>
 

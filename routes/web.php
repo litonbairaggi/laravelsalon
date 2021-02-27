@@ -37,6 +37,14 @@ Auth::routes([
 ]);
 Route::group(['middleware' => 'auth'], function () {
 
+// slider rout
+Route::get('/backend/slider/create','Backend\SliderController@create');         
+Route::post('/backend/slider/store','Backend\SliderController@store');         
+Route::get('/backend/slider/list','Backend\SliderController@list');         
+Route::get('/backend/slider/edit/{id}','Backend\SliderController@edit');         
+Route::post('/backend/slider/update/{id}','Backend\SliderController@update');         
+Route::get('/backend/slider/delete/{id}','Backend\SliderController@delete');         
+
 // team rout
 Route::get('/backend/team/create','Backend\TeamController@create');
 Route::post('/backend/team/store','Backend\TeamController@store');

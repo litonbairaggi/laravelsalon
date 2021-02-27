@@ -39,14 +39,6 @@ class BlogController extends Controller
         $blog=Blog::findOrFail($id);
         return view('backend.blog.edit', compact('blog'));
     }
-    public function delete($id){
-        $blogProfile=Blog::findOrFail($id);
-        $blogProfile->delete();
-        Session::flash('message', 'Blog successfully Delete');
-        return redirect()->back();
-        //return view('backend.servicess.delete');
-
-    }
 
     public function update(Request $request, $id){
         $bloProfile=Blog::findOrFail($id);
@@ -57,4 +49,14 @@ class BlogController extends Controller
         Session::flash('message', 'Successfully Update'); 
         return redirect()->back();
     }
+    
+    public function delete($id){
+        $blogProfile=Blog::findOrFail($id);
+        $blogProfile->delete();
+        Session::flash('message', 'Blog successfully Delete');
+        return redirect()->back();
+        //return view('backend.servicess.delete');
+
+    }
+
 }
