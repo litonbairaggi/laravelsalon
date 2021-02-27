@@ -43,6 +43,7 @@
                                     <label for="instagram">Instagram:</label>
                                     <input type="text" class="form-control" placeholder="Enter instagram" name="instagram" id="instagram">
                                 </div>
+                                
                                 <div class="form-group">
                                     <label for="instagram">Team Image:</label>
                                     <input type="file" class="form-control"  name="team_img">

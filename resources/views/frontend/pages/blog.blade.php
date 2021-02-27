@@ -12,34 +12,15 @@
 <div class="blog-wrap blogWrp">
   <div class="container">
     <div class="row">
+    @foreach($blogs as $blog)
       <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog01.png')}}"></div>
+        <div class="blogImg"><img alt="" src="{{URL::to('uploads', $blog->blog_img)}}"></div>
         <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
+          <h3><a href="blog_details.html">{{$blog->name}}</a></h3>
+          <div class="blog_date">Feb 27, 2021</div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog02.png')}}"></div>
-        <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog02.png')}}"></div>
-        <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog01.png')}}"></div>
-        <div class="blog_sec">
-          <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-          <div class="blog_date">May 05, 2020</div>
-        </div>
-      </div>
+    @endforeach  
     </div>
     <div class="blog-pagination text-center"> <a href="#0"><i class="fas fa-angle-left"></i></a> <a href="#0">01</a> <a href="#0" class="active">02</a> <a href="#0">03</a> <a href="#0"><i class="fas fa-angle-right"></i></a> </div>
   </div>

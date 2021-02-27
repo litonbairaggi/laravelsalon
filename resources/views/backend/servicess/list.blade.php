@@ -13,8 +13,8 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
                                                 <th>Image</th>
+                                                <th>Name</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
                                             </tr>
@@ -22,8 +22,8 @@
                                         <tfoot>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Name</th>
                                                 <th>Image</th>
+                                                <th>Name</th>
                                                 <th>Description</th>
                                                 <th>Action</th>
                                             </tr>

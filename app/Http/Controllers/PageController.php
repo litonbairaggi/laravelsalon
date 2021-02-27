@@ -12,6 +12,7 @@ class PageController extends Controller
 {
     //
     public function home(){
+        
         $teams=Team::get();
         $servicess=Services::orderBy('id','desc')->limit(3)->get();
         $blogs=Blog::orderBy('id', 'asc')->limit(2)->get();
@@ -19,11 +20,12 @@ class PageController extends Controller
         return view('frontend.pages.index', compact('teams','servicess','blogs','testimonials'));
     }
     public function about(){
-        return view('frontend.pages.about');
+        $teams=Team::get();
+        return view('frontend.pages.about', compact('teams'));
     }
     public function services(){
-        //  $servicess=Services::get();
-        return view('frontend.pages.services');
+        $servicess=Services::orderBy('id', 'desc')->limit(6)->get();
+        return view('frontend.pages.services',compact('servicess'));
     }
     public function services_details(){
         return view('frontend.pages.services_details');
@@ -38,19 +40,24 @@ class PageController extends Controller
         return view('frontend.pages.gallery_03');
     }
     public function blog(){
-        return view('frontend.pages.blog');
+        $blogs=Blog::get();
+        return view('frontend.pages.blog',compact('blogs'));
     }
     public function blog_details(){
-        return view('frontend.pages.blog_details');
+        $blogdetails=Blog::orderBy('id', 'desc')->limit(1)->get();
+        return view('frontend.pages.blog_details',compact('blogdetails'));
     }
     public function blog_grid(){
-        return view('frontend.pages.blog_grid');
+        $bloggrids=Blog::get();
+        return view('frontend.pages.blog_grid', compact('bloggrids'));
     }
     public function blog_list(){
-        return view('frontend.pages.blog_list');
+        $bloglists=Blog::get();
+        return view('frontend.pages.blog_list', compact('bloglists'));
     }
     public function testimonials(){
-        return view('frontend.pages.testimonials');
+        $testimonials=Testimonial::get();
+        return view('frontend.pages.testimonials',compact('testimonials'));
     }
     public function contact(){
         return view('frontend.pages.contact');

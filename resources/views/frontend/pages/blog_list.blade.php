@@ -14,62 +14,22 @@
     <div class="row">
       <div class="col-lg-8">
         <ul class="blog_list">
+        @foreach($bloglists as $bloglist)
           <li>
             <div class="row">
               <div class="col-lg-5 col-md-5">
-                <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog01.jpg')}}"></div>
+                <div class="blogImg"><img alt="" src="{{URL::to('uploads',$bloglist->blog_img)}}"></div>
               </div>
               <div class="col-lg-7 col-md-7">
                 <div class="blog_sec">
-                  <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-                  <div class="blog_date">May 05, 2020</div>
+                  <h3><a href="blog_details.html">{{$bloglist->name}}</a></h3>
+                  <div class="blog_date">Feb 27, 2021</div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi velit, vestibulum eu auctor eget, dictum at lacus. Praesent quis volutpat mauris. Nam suscipit vestibulum sem quis varius.</p>
                 </div>
               </div>
             </div>
           </li>
-          <li>
-            <div class="row">
-              <div class="col-lg-5 col-md-5">
-                <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog02.jpg')}}"></div>
-              </div>
-              <div class="col-lg-7 col-md-7">
-                <div class="blog_sec">
-                  <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-                  <div class="blog_date">May 05, 2020</div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi velit, vestibulum eu auctor eget, dictum at lacus. Praesent quis volutpat mauris. Nam suscipit vestibulum sem quis varius.</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-lg-5 col-md-5">
-                <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog03.jpg')}}"></div>
-              </div>
-              <div class="col-lg-7 col-md-7">
-                <div class="blog_sec">
-                  <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-                  <div class="blog_date">May 05, 2020</div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi velit, vestibulum eu auctor eget, dictum at lacus. Praesent quis volutpat mauris. Nam suscipit vestibulum sem quis varius.</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="row">
-              <div class="col-lg-5 col-md-5">
-                <div class="blogImg"><img alt="" src="{{ asset('assets/images/blog01.jpg')}}"></div>
-              </div>
-              <div class="col-lg-7 col-md-7">
-                <div class="blog_sec">
-                  <h3><a href="blog_details.html">Praesent consequat justo ut sollicitudin molestie.</a></h3>
-                  <div class="blog_date">May 05, 2020</div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisi velit, vestibulum eu auctor eget, dictum at lacus. Praesent quis volutpat mauris. Nam suscipit vestibulum sem quis varius.</p>
-                </div>
-              </div>
-            </div>
-          </li>
+          @endforeach
         </ul>
         <div class="blog-pagination text-center"> <a href="#0"><i class="fas fa-angle-left"></i></a> <a href="#0">01</a> <a href="#0" class="active">02</a> <a href="#0">03</a> <a href="#0"><i class="fas fa-angle-right"></i></a> </div>
       </div>

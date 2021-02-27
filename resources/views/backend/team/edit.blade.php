@@ -28,6 +28,21 @@
                                     <label for="facebook">Facebook:</label>
                                     <input type="text" class="form-control" value="{{$team->facebook}}" placeholder="Enter facebook" name="facebook" id="facebook">
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="linkedin">Linkedin:</label>
+                                    <input type="text" class="form-control" value="{{$team->linkedin}}" placeholder="Enter linkedin" name="linkedin" id="linkedin">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="twitter">Twitter:</label>
+                                    <input type="text" class="form-control" value="{{$team->twitter}}" placeholder="Enter twitter" name="twitter" id="twitter">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="instagram">Instagram:</label>
+                                    <input type="text" class="form-control" value="{{$team->instagram}}" placeholder="Enter instagram" name="instagram" id="instagram">
+                                </div>
                          
                                 <button type="submit" class="btn btn-primary">Update</button>
                                 </form>

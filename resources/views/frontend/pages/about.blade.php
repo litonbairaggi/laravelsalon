@@ -46,9 +46,10 @@
       <h1>Our Experts</h1>
     </div>
     <div class="row">
+    @foreach($teams as $team)
       <div class="col-lg-3 col-md-6">
         <div class="experts">
-          <div class="teamImg"><img src="{{ asset('assets/images/team01.jpg')}}">
+          <div class="teamImg"><img src="{{URL::to('uploads', $team->team_img)}}">
             <ul class="social-icons list-inline">
               <!-- social-icons -->
               <li class="social-facebook"> <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
@@ -58,66 +59,14 @@
             </ul>
           </div>
           <div class="team_content">
-            <h5><a href="#">Jill Cortez</a></h5>
-            <p class="category">Hair Expert</p>
+            <h5><a href="#">{{$team->name}}</a></h5>
+            <p class="category">{{$team->desigation}}</p>
             <!-- category --> 
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="experts">
-          <div class="teamImg"><img src="{{ asset('assets/images/team02.jpg')}}">
-            <ul class="social-icons list-inline">
-              <!-- social-icons -->
-              <li class="social-facebook"> <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
-              <li class="social-twitter"> <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
-              <li class="social-linkedin"> <a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
-              <li class="social-googleplus"> <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
-            </ul>
-          </div>
-          <div class="team_content">
-            <h5><a href="#">Calvin Roy</a></h5>
-            <p class="category">Style Expert</p>
-            <!-- category --> 
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="experts">
-          <div class="teamImg"><img src="{{ asset('assets/images/team03.jpg')}}">
-            <ul class="social-icons list-inline">
-              <!-- social-icons -->
-              <li class="social-facebook"> <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
-              <li class="social-twitter"> <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
-              <li class="social-linkedin"> <a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
-              <li class="social-googleplus"> <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
-            </ul>
-          </div>
-          <div class="team_content">
-            <h5><a href="#">Christie Pratt</a></h5>
-            <p class="category">Nail Expert</p>
-            <!-- category --> 
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="experts">
-          <div class="teamImg"><img src="{{ asset('assets/images/team04.jpg')}}">
-            <ul class="social-icons list-inline">
-              <!-- social-icons -->
-              <li class="social-facebook"> <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a> </li>
-              <li class="social-twitter"> <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a> </li>
-              <li class="social-linkedin"> <a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a> </li>
-              <li class="social-googleplus"> <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a> </li>
-            </ul>
-          </div>
-          <div class="team_content">
-            <h5><a href="#">Ben Jonson</a></h5>
-            <p class="category">Hair Expert</p>
-            <!-- category --> 
-          </div>
-        </div>
-      </div>
+
+    @endforeach
     </div>
   </div>
 </div>
