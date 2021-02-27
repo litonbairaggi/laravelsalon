@@ -85,6 +85,10 @@ Route::get('/backend/testimonial/edit/{id}','Backend\TestimonialController@edit'
 Route::post('/backend/testimonial/update/{id}','Backend\TestimonialController@update');
 Route::get('/backend/testimonial/delete/{id}','Backend\TestimonialController@delete');
 
+// allsettings rout
+Route::get('/backend/allsettings/create','Backend\SettingsController@create');
+Route::post('/backend/allsettings/store','Backend\SettingsController@store');
+
 });
 
 

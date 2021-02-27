@@ -130,6 +130,11 @@
                                 </nav>
                             </div>
 
+                            <a class="nav-link collapsed" href="{{URL::to('/backend/allsettings/create')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Settings                               
+                            </a>
+                            
                 </nav>
             </div>
             <div id="layoutSidenav_content">
