@@ -31,7 +31,6 @@ class BlogController extends Controller
     }
     public function list(){
         $blogs =Blog::all();
-
         return view('backend.blog.list', compact('blogs'));
     }
 
@@ -49,7 +48,7 @@ class BlogController extends Controller
         Session::flash('message', 'Successfully Update'); 
         return redirect()->back();
     }
-    
+
     public function delete($id){
         $blogProfile=Blog::findOrFail($id);
         $blogProfile->delete();

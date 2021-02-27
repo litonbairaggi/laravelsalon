@@ -14,90 +14,16 @@
   <div class="container">
     <div class="galley_inner">
       <div class="row">
+      
+      @foreach($gallerys_02 as $gallery)
         <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery01.jpg')}}" alt="">
+          <div class="galleryImg"><img src="{{URL::to('uploads',$gallery->gallery_img)}}" alt="">
             <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery01.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
+              <div class="content"> <a href="{{URL::to('uploads',$gallery->gallery_img)}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery02.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery02.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery03.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery03.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery04.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery04.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery05.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery05.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery06.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery06.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery07.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery07.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery08.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery08.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery01.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery01.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery02.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery02.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery03.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery03.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="galleryImg"><img src="{{ asset('assets/images/gallery04.jpg')}}" alt="">
-            <div class="portfolio-overley">
-              <div class="content"> <a href="{{ asset('assets/images/gallery04.jpg')}}" class="fancybox image-link" data-fancybox="images" title="Image Caption Here"><i class="fa fa-plus" aria-hidden="true"></i></a> </div>
-            </div>
-          </div>
-        </div>
+      @endforeach  
       </div>
       <div class="blog-pagination text-center"> <a href="#0"><i class="fas fa-angle-left"></i></a> <a href="#0">01</a> <a href="#0" class="active">02</a> <a href="#0">03</a> <a href="#0"><i class="fas fa-angle-right"></i></a> </div>
     </div>

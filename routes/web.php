@@ -69,6 +69,14 @@ Route::get('/backend/servicess/edit/{id}','Backend\ServicesController@edit');
 Route::post('/backend/servicess/update/{id}','Backend\ServicesController@update');
 Route::get('/backend/servicess/delete/{id}','Backend\ServicesController@delete');
 
+// gallery rout
+Route::get('/backend/gallery/create','Backend\GalleryController@create');
+Route::post('/backend/gallery/store','Backend\GalleryController@store');
+Route::get('/backend/gallery/list','Backend\GalleryController@list');
+Route::get('/backend/gallery/edit/{id}','Backend\GalleryController@edit');
+Route::post('/backend/gallery/update/{id}','Backend\GalleryController@update');
+Route::get('/backend/gallery/delete/{id}','Backend\GalleryController@delete');
+
 // testimonial rout
 Route::get('/backend/testimonial/create','Backend\TestimonialController@create');
 Route::post('/backend/testimonial/store','Backend\TestimonialController@store');

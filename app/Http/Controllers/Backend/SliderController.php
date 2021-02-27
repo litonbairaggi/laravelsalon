@@ -20,6 +20,11 @@ class SliderController extends Controller
         return view('backend.slider.list',compact('sliders'));
     }
 
+    public function edit($id){
+        $slider=Slider::findOrFail($id);
+        return view('backend.slider.edit',compact('slider'));
+    }
+
     public function store(Request $request){
 
         $sliderImageName = time().'.'.$request->slider_img->extension();  
@@ -34,17 +39,12 @@ class SliderController extends Controller
         return redirect()->back();
     }
 
-    public function edit($id){
-        $slider=Slider::all();
-        return view('backend.slider.edit',compact('slider'));
-    }
-
     public function update(Request $request, $id){
         $sliderProfile=Slider::findOrFail($id);
         $sliderProfile->name=$request->name;
         $sliderProfile->description=$request->description;
         $sliderProfile->save();
-        
+
         Session::flash('message', 'Successfully Update'); 
         return redirect()->back();
     }

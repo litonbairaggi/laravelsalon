@@ -5,26 +5,21 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table mr-1"></i>
-                            Gallery Create
+                                Gallery Update
                             </div>
                             <div class="card-body">
 
                             @if(Session::has('message'))
 <p class="alert alert-success">{{ Session::get('message') }}</p>
 @endif   
-                            <form action="{{URL::to('/backend/gallery/store')}}" method="post" enctype="multipart/form-data">
+                            <form action="{{URL::to('/backend/gallery/update',$gallery->id)}}" method="post">
                             @csrf
                                 <div class="form-group">
                                     <label for="name">Image name:</label>
-                                    <input type="text" class="form-control" placeholder="Image name" name="name" id="name">
-                                </div>
+                                    <input type="text" class="form-control" value="{{$gallery->name}}" placeholder="Blog name" name="name" id="name">
+                                </div>  
                                 
-                                <div class="form-group">
-                                    <label for="name">Gallery Image:</label>
-                                    <input type="file" class="form-control" name="gallery_img">
-                                </div>
-                                
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Update</button>
                                 </form>
 
                             </div>

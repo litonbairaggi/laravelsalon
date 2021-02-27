@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Slider;
 use App\Team;
 use App\Services;
 use App\Blog;
+use App\Gallery;
 use App\Testimonial;
 use Illuminate\Http\Request;
 
@@ -13,11 +15,12 @@ class PageController extends Controller
     //
     public function home(){
         
+        $sliders=Slider::orderBy('id','asc')->limit(3)->get();
         $teams=Team::get();
         $servicess=Services::orderBy('id','desc')->limit(3)->get();
         $blogs=Blog::orderBy('id', 'asc')->limit(2)->get();
         $testimonials=Testimonial::get();
-        return view('frontend.pages.index', compact('teams','servicess','blogs','testimonials'));
+        return view('frontend.pages.index', compact('sliders','teams','servicess','blogs','testimonials'));
     }
     public function about(){
         $teams=Team::get();
@@ -31,13 +34,16 @@ class PageController extends Controller
         return view('frontend.pages.services_details');
     }
     public function gallery(){
-        return view('frontend.pages.gallery');
+        $gallerys=Gallery::get();
+        return view('frontend.pages.gallery', compact('gallerys'));
     }
     public function gallery_02(){
-        return view('frontend.pages.gallery_02');
+        $gallerys_02=Gallery::get();
+        return view('frontend.pages.gallery_02', compact('gallerys_02'));
     }
     public function gallery_03(){
-        return view('frontend.pages.gallery_03');
+        $gallerys_03=Gallery::get();
+        return view('frontend.pages.gallery_03', compact('gallerys_03'));
     }
     public function blog(){
         $blogs=Blog::get();

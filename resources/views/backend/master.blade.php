@@ -112,9 +112,8 @@
                             </a>
                             <div class="collapse" id="gallery" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{URL::to('/backend/blog/create')}}">Gallery Create</a>
-                                    <a class="nav-link" href="{{URL::to('/backend/blog/list')}}">Gallery List</a>
-                                    <a class="nav-link" href="{{URL::to('/backend/blog/edit')}}">Gallery Edit</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/gallery/create')}}">Gallery Create</a>
+                                    <a class="nav-link" href="{{URL::to('/backend/gallery/list')}}">Gallery List</a>
                                 </nav>
                             </div>
 
