@@ -121,7 +121,7 @@
           <h3>Get in Touch</h3>
           <ul class="footer-adress">
             <li class="footer_address"> <i class="fas fa-map-signs"></i> <span>123 Lorem Ipsum, 32 sit Atlanta</span> </li>
-            <li class="footer_email"> <i class="fas fa-envelope" aria-hidden="true"></i> <span><a href="mailto:info@example.com"> info@example.com </a></span> </li>
+            <li class="footer_email"> <i class="fas fa-envelope" aria-hidden="true"></i> <span><a href="mailto:{{$settingProfile->email}}"> {{$settingProfile->email}} </a></span> </li>
             <li class="footer_phone"> <i class="fas fa-phone-alt"></i> <span><a href="tel:7704282433"> 770-123-4567</a></span> </li>
           </ul>
           <div class="social-icons footer_icon">

@@ -20,7 +20,7 @@ class CreateSettingssTable extends Migration
             $table->string('facebook');
             $table->string('linkedin');
             $table->string('twitter');
-            $table->string('Instagram');
+            $table->string('instagram');
             $table->timestamps();
         });
     }

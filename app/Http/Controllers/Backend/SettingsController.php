@@ -12,23 +12,36 @@ class SettingsController extends Controller
 {
     //
     public function create(){
-        return view('backend.allsettings.create');
+         $settingProfile=Settings::find(1);
+        return view('backend.allsettings.create',compact('settingProfile'));
     }
 
     public function store(Request $request){
-
-        $allsettingsImageName = time().'.'.$request->logo->extension();  
+        // return $request;
+        $settingProfile=Settings::find($request->setting_id);
+        if(empty($settingProfile)) {
+            $allsettingsImageName = time().'.'.$request->logo->extension();  
         $request->logo->move('uploads', $allsettingsImageName);
 
-        $allsettingsobj= new Settings;
-        $allsettingsobj->email=$request->email;     
-        $allsettingsobj->facebook=$request->facebook;       
-        $allsettingsobj->linkedin=$request->linkedin;       
-        $allsettingsobj->twitter=$request->twitter;           
-        $allsettingsobj->instagram=$request->instagram; 
-        $allsettingsobj->logo=$allsettingsImageName;
-        $allsettingsobj->save();
+            $allsettingsobj= new Settings;
+            $allsettingsobj->email=$request->email;     
+            $allsettingsobj->facebook=$request->facebook;       
+            $allsettingsobj->linkedin=$request->linkedin;       
+            $allsettingsobj->twitter=$request->twitter;           
+            $allsettingsobj->instagram=$request->instagram; 
+            $allsettingsobj->logo=$allsettingsImageName;
+            $allsettingsobj->save();
         Session::flash('message', 'Successfully Create');
+        } else {
+            $settingProfile->email=$request->email;     
+            $settingProfile->facebook=$request->facebook;       
+            $settingProfile->linkedin=$request->linkedin;       
+            $settingProfile->twitter=$request->twitter;           
+            $settingProfile->instagram=$request->instagram; 
+            $settingProfile->save();
+            Session::flash('message', 'Successfully Updated');
+        }
+        
 
         return redirect()->back();
     }

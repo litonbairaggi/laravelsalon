@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Settings;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        View::composer('*', function($view){
+            $view->with('settingProfile', Settings::find(1));
+        });
+       
     }
 
     /**

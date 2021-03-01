@@ -9,7 +9,7 @@ class Settings extends Model
     //
     
     protected $table='settingss';
-    protected $hidden = [
+    protected $fillable = [
         'id',
         'email', 
         'facebook',

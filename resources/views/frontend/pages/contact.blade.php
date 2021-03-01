@@ -71,7 +71,7 @@
             <li>
               <div class="contact_box">
                 <div class="icon"> <img alt="" src="images/email.png"> </div>
-                <p>E-mail<span> <a href="mailto:info@example.com">info@example.com</a></span></p>
+                <p>E-mail<span> <a href="mailto:info@example.com">{{$settingProfile->email}}</a></span></p>
               </div>
             </li>
             <li>
