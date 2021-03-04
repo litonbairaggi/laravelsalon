@@ -281,19 +281,19 @@
             <li>
               <div class="contact_box">
                 <div class="icon"> <img alt="" src="{{ asset('assets/images/adress.png')}}"> </div>
-                <p>Main Office <span>123 Lorem Ipsum, 32 sit Atlanta</span></p>
+                <p>Main Office <span><a href="#">{{$settingProfile->address}}</a></span></p>
               </div>
             </li>
             <li>
               <div class="contact_box">
                 <div class="icon"> <img alt="" src="{{ asset('assets/images/email.png')}}"> </div>
-                <p>E-mail<span> <a href="mailto:info@example.com">info@example.com</a></span></p>
+                <p>E-mail<span> <a href="mailto:info@example.com">{{$settingProfile->email}}</a></span></p>
               </div>
             </li>
             <li>
               <div class="contact_box">
                 <div class="icon"> <img alt="" src="{{ asset('assets/images/phone.png')}}"> </div>
-                <p>Phone<span> <a href="tel:7701234567">(770) 123 4567</a></span></p>
+                <p>Phone<span> <a href="tel:7701234567">{{$settingProfile->phone}}</a></span></p>
               </div>
             </li>
           </ul>

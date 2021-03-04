@@ -45,14 +45,14 @@
                   <li class="nav-item"> <a class="nav-link" href="{{URL::to('/')}}">Home <span class="sr-only">(current)</span></a> </li>
                   <li class="nav-item"><a class="nav-link" href="{{URL::to('/about')}}">About</a></li>
 
-                  <li class="nav-item"><a class="nav-link" href="#">Services</a> <i class="fas fa-caret-down"></i>
+                  <li class="nav-item"><a class="nav-link" href="{{URL::to('/services')}}">Services</a> <i class="fas fa-caret-down"></i>
                     <ul class="submenu">
                       <li><a href="{{URL::to('/services')}}">Services</a></li>
                       <li><a href="{{URL::to('/services_details')}}">Service Details</a></li>
                     </ul>
                   </li>
 
-                  <li class="nav-item"><a class="nav-link" href="#">Gallery</a> <i class="fas fa-caret-down"></i>
+                  <li class="nav-item"><a class="nav-link" href="{{URL::to('/gallery')}}">Gallery</a> <i class="fas fa-caret-down"></i>
                     <ul class="submenu">
                       <li><a href="{{URL::to('/gallery')}}">Gallery Style 01</a></li>
                       <li><a href="{{URL::to('/gallery_02')}}">Gallery Style 02</a></li>
@@ -60,7 +60,7 @@
                     </ul>
                   </li>
 
-                  <li class="nav-item"><a class="nav-link" href="#">Blog</a> <i class="fas fa-caret-down"></i>
+                  <li class="nav-item"><a class="nav-link" href="{{URL::to('/blog')}}">Blog</a> <i class="fas fa-caret-down"></i>
                     <ul class="submenu">
                       <li><a href="{{URL::to('/blog')}}">Blog</a></li>
                       <li><a href="{{URL::to('/blog_grid')}}">Blog Grid</a></li>
@@ -95,13 +95,13 @@
       <div class="col-lg-2 col-md-3">
         <h3>Quick links</h3>
         <ul class="footer-links">
-          <li> <a href="index.html">Home</a></li>
-          <li> <a href="about.html">About</a></li>
-          <li> <a href="services.html">Services</a></li>
-          <li> <a href="gallery.html">Gallery</a></li>
-          <li> <a href="testimonials.html">Testimonials</a></li>
-          <li> <a href="blog.html">Blog</a></li>
-          <li> <a href="contact.html">Contact Us</a></li>
+          <li> <a href="{{URL::to('/')}}">Home</a></li>
+          <li> <a href="{{URL::to('/about')}}">About</a></li>
+          <li> <a href="{{URL::to('/services')}}">Services</a></li>
+          <li> <a href="{{URL::to('/gallery')}}">Gallery</a></li>
+          <li> <a href="{{URL::to('/blog')}}">Blog</a></li>
+          <li> <a href="{{URL::to('/testimonials')}}">Testimonials</a></li>
+          <li> <a href="{{URL::to('/contact')}}">Contact Us</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-4">
@@ -120,16 +120,17 @@
         <div class="footer_info">
           <h3>Get in Touch</h3>
           <ul class="footer-adress">
-            <li class="footer_address"> <i class="fas fa-map-signs"></i> <span>123 Lorem Ipsum, 32 sit Atlanta</span> </li>
+            <li class="footer_address"> <i class="fas fa-map-signs"></i> <span>{{$settingProfile->address}}</span> </li>
             <li class="footer_email"> <i class="fas fa-envelope" aria-hidden="true"></i> <span><a href="mailto:{{$settingProfile->email}}"> {{$settingProfile->email}} </a></span> </li>
-            <li class="footer_phone"> <i class="fas fa-phone-alt"></i> <span><a href="tel:7704282433"> 770-123-4567</a></span> </li>
+            <li class="footer_phone"> <i class="fas fa-phone-alt"></i> <span><a href="tel:7704282433">{{$settingProfile->phone}}</a></span> </li>
           </ul>
           <div class="social-icons footer_icon">
             <ul>
-              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://twitter.com/"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.youtube.com/"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>

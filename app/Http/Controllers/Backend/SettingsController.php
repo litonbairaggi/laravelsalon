@@ -24,7 +24,10 @@ class SettingsController extends Controller
         $request->logo->move('uploads', $allsettingsImageName);
 
             $allsettingsobj= new Settings;
+            $allsettingsobj->name=$request->name;     
+            $allsettingsobj->address=$request->address;     
             $allsettingsobj->email=$request->email;     
+            $allsettingsobj->phone=$request->phone;     
             $allsettingsobj->facebook=$request->facebook;       
             $allsettingsobj->linkedin=$request->linkedin;       
             $allsettingsobj->twitter=$request->twitter;           
@@ -33,7 +36,10 @@ class SettingsController extends Controller
             $allsettingsobj->save();
         Session::flash('message', 'Successfully Create');
         } else {
+            $settingProfile->name=$request->name;     
+            $settingProfile->address=$request->address;     
             $settingProfile->email=$request->email;     
+            $settingProfile->phone=$request->phone;     
             $settingProfile->facebook=$request->facebook;       
             $settingProfile->linkedin=$request->linkedin;       
             $settingProfile->twitter=$request->twitter;           

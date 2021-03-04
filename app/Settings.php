@@ -11,7 +11,10 @@ class Settings extends Model
     protected $table='settingss';
     protected $fillable = [
         'id',
+        'name',
+        'address',
         'email', 
+        'phone',
         'facebook',
         'linkedin',
         'twitter',
